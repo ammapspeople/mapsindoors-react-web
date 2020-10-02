@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+import Search from './Search';
 import LocationDetails from './LocationDetails';
 
 function Map() {
@@ -37,9 +38,19 @@ function Map() {
       <mi-card>
         <button className="card-close" onClick={() => close()}>&mdash;</button>
 
+        { page === pages.SEARCH &&
+          <Search></Search>
+        }
+
         { page === pages.LOCATION_DETAILS &&
           <LocationDetails location={location}></LocationDetails>
         }
+      </mi-card>
+    }
+
+    {page === pages.NONE &&
+      <mi-card class="no-page">
+        <button className="card-close" onClick={() => setPage(pages.SEARCH)}>▲</button>
       </mi-card>
     }
   </div>
