@@ -97,7 +97,7 @@ mi-map {
   font-size: 1.25rem;
 }
 
-.app-nav {
+.app-nav-button {
   grid-area: nav;
   background-color: rgb(67, 160, 71);
   color: white;
