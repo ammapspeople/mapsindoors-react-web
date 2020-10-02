@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Map from './Map';
-import Nav from './Navigation';
 
 function AppTitle(props) {
   return <header className="app-title">
@@ -14,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <AppTitle title="Welcome to MapsIndoors"></AppTitle>
-      <Nav navIsActive={false}></Nav>
       <Map></Map>
     </div>
   );
