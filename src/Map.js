@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+import LocationCard from './LocationCard';
+
 function Map() {
   let [location, setLocation] = useState({});
 
@@ -17,7 +19,7 @@ function Map() {
   return <div className="map">
     <mi-map ref={mapElementReference} zoom="18" position-control="TOP_CENTER" mi-api-key="demo" gm-api-key="AIzaSyBNhmxW2OntKAVs7hjxmAjFscioPcfWZSc" floor-selector="RIGHT_CENTER"></mi-map>
     {location.id &&
-        <mi-card class="map-card">Location</mi-card>
+        <LocationCard close={() => setLocation({})} className="map-card" location={location}></LocationCard>
     }
   </div>
 }
