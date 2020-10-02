@@ -148,3 +148,8 @@ mi-location-info {
   color: #777;
   margin: 0.5rem 0;
 }
+
+.search {
+  max-height: 80vh;
+  overflow-y: auto;
+}
