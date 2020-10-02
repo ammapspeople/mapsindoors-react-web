@@ -31,9 +31,13 @@ function Map() {
     setPage(pages.NONE);
   }
 
-  function setLocationAndPage(location) {
+  function setLocationAndPage(location, panTo = false) {
     setLocation(location);
-    setPage(pages.LOCATION_DETAILS)
+    setPage(pages.LOCATION_DETAILS);
+
+    if (panTo === true) {
+      mapElementReference.current.panTo({ lat: location.geometry.coordinates[1], lng: location.geometry.coordinates[0]});
+    }
   }
 
   return <div className="map">

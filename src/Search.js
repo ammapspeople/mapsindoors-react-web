@@ -7,7 +7,7 @@ function ReactListItemLocation({ location, resultClicked }) {
         elementRef.current.location = location;
 
         elementRef.current.addEventListener('locationClicked', e => {
-            resultClicked(e.detail);
+            resultClicked(e.detail, true);
         });
     });
 
