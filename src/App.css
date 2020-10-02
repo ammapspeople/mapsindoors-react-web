@@ -115,12 +115,12 @@ mi-map {
   padding-top: .5rem;
 }
 
-.location-card-title {
+.location-details-title {
   font-size: 1.125rem;
   font-weight: 700;
 }
 
-.location-card-category {
+.location-details-category {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #bbb;
@@ -128,7 +128,7 @@ mi-map {
   margin: .5rem 0;
 }
 
-.location-card-close {
+.card-close {
   appearance: none;
   border: none;
   background: transparent;
