@@ -22,14 +22,18 @@ function Map() {
       });
 
       mapElementReference.current.addEventListener('locationClicked', location => {
-        setLocation(location.detail);
-        setPage(pages.LOCATION_DETAILS);
+        setLocationAndPage(location.detail);
     });
   });
 
   function close() {
     console.log('Close');
     setPage(pages.NONE);
+  }
+
+  function setLocationAndPage(location) {
+    setLocation(location);
+    setPage(pages.LOCATION_DETAILS)
   }
 
   return <div className="map">
@@ -39,7 +43,7 @@ function Map() {
         <button className="card-close" onClick={() => close()}>&mdash;</button>
 
         { page === pages.SEARCH &&
-          <Search></Search>
+          <Search resultClicked={setLocationAndPage}></Search>
         }
 
         { page === pages.LOCATION_DETAILS &&
